@@ -1,0 +1,232 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header Section */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2C3E50;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.header h3 {
+    margin: 0;
+    font-size: 20px;
+    color: yellow;
+    transition: color 0.3s ease;
+}
+
+.header h3:hover {
+    color: #3498db;
+}
+
+.a1 {
+    text-decoration: none;
+}
+
+.a2 {
+    text-decoration: none;
+    color: white;
+}
+
+.a2:hover {
+    color: #3498db;
+}
+
+/* Main Content */
+.main {
+    margin-top: 80px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Product Card */
+.product {
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover img {
+    transform: scale(1.1);
+}
+
+.product h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: #2C3E50;
+}
+
+.product h2 {
+    font-size: 20px;
+    color: #E74C3C;
+    margin: 10px 0;
+}
+
+.product a {
+    text-decoration: none;
+    color: white;
+    background-color: #3498db;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.product a:hover {
+    background-color: #2980b9;
+}
+
+/* Footer Floating Icon */
+.float-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 60px;
+    width: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 2s infinite;
+}
+
+.float-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Animation for floating icon */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 576px) {
+    body {
+        background-color: #34495E;
+    }
+
+    .header {
+        position: fixed;
+        bottom: 10px;
+        top: unset;
+        background-color: #2C3E50;
+        width: 95%;
+        border-radius: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+    }
+
+    .header h3 {
+        font-size: 14px;
+    }
+
+    .main {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .product {
+        height: auto;
+        padding: 15px;
+    }
+
+    .product img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .product h3 {
+        font-size: 18px;
+    }
+
+    .product h2 {
+        font-size: 16px;
+    }
+
+    .product a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+/* For Larger Screens */
+@media (min-width: 1200px) {
+    body {
+        background-color:orange;
+    }
+
+    .header {
+        background-color: green;
+        height: 70px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .product {
+        background-color: #F9F9F9;
+        padding: 25px;
+    }
+
+    .product h3 {
+        font-size: 24px;
+    }
+
+    .product h2 {
+        font-size: 22px;
+    }
+
+    .float-icon {
+        bottom: 20px;
+        right: 20px;
+    }
+}

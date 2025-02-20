@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #00796b;
+            font-size: 22px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            text-align: left;
+            color: #00796b;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 14px;
+            border: 1px solid #00796b;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .gender-group {
+            text-align: left;
+            margin-bottom: 14px;
+        }
+
+        .gender-group input {
+            margin-right: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 12px;
+            color: #00796b;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form action="login.html" method="GET">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="mobile">Mobile:</label>
+            <input type="number" id="mobile" name="mobile" required><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <div class="gender-group">
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="Male" required> Male
+                <input type="radio" id="female" name="gender" value="Female" required> Female
+            </div><br>
+
+            <button type="submit">Submit</button><br> 
+
+            <a href="login.html">Already have an account? Login</a><br>
+        </form>
+    </div>
+</body>
+
+</html>
